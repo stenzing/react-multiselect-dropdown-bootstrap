@@ -171,7 +171,7 @@ class DropdownMultiselect extends React.Component {
                 className="actions-btn btn btn-light"
                 onClick={() => this.handleSelectDeselectAll()}
               >
-                Select/Deselect All
+                {this.props.placeholderSelectAll}
               </button>
             </div>
           )}
@@ -215,7 +215,7 @@ DropdownMultiselect.propTypes = {
   selected: PropTypes.array,
   value: PropTypes.array,
   placeholder: PropTypes.string,
-  placeholderMultipleChecked: PropTypes.string,
+  placeholderSelectAll: PropTypes.string,
   options: PropTypes.array.isRequired,
   name: PropTypes.string.isRequired,
   showSelectToggle: PropTypes.bool,
@@ -223,6 +223,7 @@ DropdownMultiselect.propTypes = {
 
 DropdownMultiselect.defaultProps = {
   placeholder: "Nothing selected",
+  placeholderSelectAll: "Select/Deselect All",
   buttonClass: "btn-light",
   placeholderMultipleChecked: null,
   selected: [],
